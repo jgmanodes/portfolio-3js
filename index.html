@@ -4,24 +4,300 @@
 <head>
   <meta charset=UTF-8 />
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <title>Jorge González Dev 🧑‍🚀</title>
 </head>
 
 <body>
   <header>
-    <!-- <h1>Jorge Gonzalez</h1> -->
+    <h1 id="name-title">Jorge González</h1>
     <nav>
-      <div class="button" onclick="accelerate()">Stellar Thrust</div>
-      <div class="button" onclick="decelerate()">Cosmic Break</div>
-</nav>
+      <div class="button" id="about-button">Acerca de mi</div>
+      <div class="button" id="projects-button">Proyectos</div>
+      <div class="button" id="contact-button">Contacto</div>
+    </nav>
   </header>
 
-  <script src="three.min.js"></script>
-  <script src="src/scene.js"></script>
-  <script src="https://unpkg.com/three@0.124.0"></script>
-  <script src="https://unpkg.com/three-glow-mesh@1.0.0"></script>
+  <main>
+    <section id="about" class="container">
+      <div class="title">
+        Acerca de mí
+      </div>
 
-  <!-- <script src="src/main.js"></script> -->
+      <div class="content">
+        <div class="text-container">
+          <p class="black">¡Hola! Mi nombre es Jorge González, soy un Desarrollador Full Stack de 27 años y vivo en
+            Chile
+            🇨🇱 Soy padre con un alto sentido de responsabilidad y me considero una persona proactiva, autodidacta,
+            creativa y altamente organizada.</p>
+          <p class="black">Tengo 7 años de experiencia en el área de Servicios Técnicos, lo cual me ha ayudó a pulir mis
+            habilidades de orientación al detalle, resolución de problemas, comunicación efectiva y liderazgo.</p>
+          <p>Entré al mundo de la programación gracias a mi curiosidad por saber como funcionan las cosas. En el año
+            2021,
+            realicé varios cursos en distintas plataformas en linea y en 2023 me certifiqué como Desarrollador Full
+            Stack
+            Javascript en un bootcamp impartido por Generation Chile.</p>
+          <p>
+            Me apasiona el arte, la música, los libros y el cine. Mis temas favoritos son la ciencia, la tecnología, el
+            espacio y el 3d. Me gusta dibujar, jugar videojuegos, cocinar y aprender cosas nuevas.
+          </p>
+          <p>
+            Como autodidacta, me he adentrado en el mundo del Modelado e Impresión 3d, Programación Fullstack en
+            JavaScript y Diseño Web, actualmente me encuentro ¿puliendo? estas ¿habilidades? hasta dominarlos.
+          </p>
+          <p class="black">
+            También domino el idioma inglés (C1) y me encuentro aprendiendo Francés, lo cual me permitirá ampliar mi
+            lenguaje y posibles colaboraciones en proyectos internacionales.
+          </p>
+        </div>
+        <div class="stack-container">
+          <h3>Mi stack tecnológico</h3>
+          <ul class="stack">
+            <li class="icon">
+              <a target="_blank" href="https://html.spec.whatwg.org/multipage/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                  <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a target="_blank" href="https://www.w3.org/Style/CSS">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                  <path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a target="_blank" href="https://developer.mozilla.org/docs/Web/JavaScript">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                  <path d="M7.5 8h3v8l-2 -1"></path>
+                  <path
+                    d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5">
+                  </path>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a target="_blank" href="https://react.dev/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102">
+                  </path>
+                  <path
+                    d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102">
+                  </path>
+                  <path
+                    d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2">
+                  </path>
+                  <path
+                    d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2">
+                  </path>
+                  <path
+                    d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896">
+                  </path>
+                  <path
+                    d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897">
+                  </path>
+                  <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a target="_blank" href="https://nodejs.org/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M9 9v8.044a2 2 0 0 1 -2.996 1.734l-1.568 -.9a3 3 0 0 1 -1.436 -2.561v-6.635a3 3 0 0 1 1.436 -2.56l6 -3.667a3 3 0 0 1 3.128 0l6 3.667a3 3 0 0 1 1.436 2.561v6.634a3 3 0 0 1 -1.436 2.56l-6 3.667a3 3 0 0 1 -3.128 0">
+                  </path>
+                  <path d="M17 9h-3.5a1.5 1.5 0 0 0 0 3h2a1.5 1.5 0 0 1 0 3h-3.5"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a target="_blank" href="https://www.mysql.com/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M13 21c-1.427 -1.026 -3.59 -3.854 -4 -6c-.486 .77 -1.501 2 -2 2c-1.499 -.888 -.574 -3.973 0 -6c-1.596 -1.433 -2.468 -2.458 -2.5 -4c-3.35 -3.44 -.444 -5.27 2.5 -3h1c8.482 .5 6.421 8.07 9 11.5c2.295 .522 3.665 2.254 5 3.5c-2.086 -.2 -2.784 -.344 -3.5 0c.478 1.64 2.123 2.2 3.5 3">
+                  </path>
+                  <path d="M9 7h.01"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a target="_blank" href="https://www.mongodb.com/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 3v19"></path>
+                  <path
+                    d="M18 11.227c0 3.273 -1.812 4.77 -6 9.273c-4.188 -4.503 -6 -6 -6 -9.273c0 -4.454 3.071 -6.927 6 -9.227c2.929 2.3 6 4.773 6 9.227z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a target="_blank" href="https://getbootstrap.com/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M2 12a2 2 0 0 0 2 -2v-4a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2"></path>
+                  <path d="M2 12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-4a2 2 0 0 1 2 -2"></path>
+                  <path d="M9 16v-8h3.5a2 2 0 1 1 0 4h-3.5h4a2 2 0 1 1 0 4h-4z"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a target="_blank" href="https://threejs.org/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M8 22l-5 -19l19 5.5z"></path>
+                  <path d="M12.573 17.58l-6.152 -1.576l8.796 -9.466l1.914 6.64"></path>
+                  <path d="M12.573 17.58l-1.573 -6.58l6.13 2.179"></path>
+                  <path d="M9.527 4.893l1.473 6.107l-6.31 -1.564z"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a target="_blank" href="https://www.blender.org/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M15 14m-6 0a6 5 0 1 0 12 0a6 5 0 1 0 -12 0"></path>
+                  <path d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                  <path d="M3 16l9 -6.5"></path>
+                  <path d="M6 9h9"></path>
+                  <path d="M13 5l5.65 5"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a target="_blank" href="https://www.figma.com/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" width="24" height="24" viewBox="0 0 24 24"
+                  stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M15 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                  <path d="M6 3m0 3a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v0a3 3 0 0 1 -3 3h-6a3 3 0 0 1 -3 -3z"></path>
+                  <path d="M9 9a3 3 0 0 0 0 6h3m-3 0a3 3 0 1 0 3 3v-15"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="certificates">
+          <p>Para ver mis certificados y mi CV</p>
+          <a target="_blank" class="content-button"
+            href="https://drive.google.com/drive/folders/1v3fssHd1xjRZhqbn_AQq9Z_aFNdUuvjP">Pulsa
+            Aquí</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <div class="title">Proyectos</div>
+      <div class="content">
+        <div class="card">
+          <div class="img">
+            <img src="./assets/renovatrash.png" alt="Página web de RenovaTrash">
+          </div>
+          <div class="card-content">
+            <h2>RenovaTrash</h2>
+            <div class="text-container">
+              <p>Página web para un emprendimiento local, desarrollada como parte del proyecto integrado en el bootcamp
+                Fullstack JavaScript de Generation Chile. El trabajo se llevó a cabo en equipo, utilizando metodologías
+                ágiles como SCRUM, junto con los lenguajes, frameworks y librerías aprendidos en las clases.</p>
+            </div>
+            <div class="buttons">
+              <div class="text-container">
+                <h3>Proyecto realizado con</h3>
+                <p>React, Bootstrap, Node.JS, Express y MySQL </p>
+              </div>
+              <a class="content-button" target="_blank" href="https://renovatrash.onrender.com/">Ir al sitio</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img">
+            <img src="./assets/portafolio-web.png" alt="Página web, portafolio personal">
+          </div>
+          <div class="card-content">
+            <h2>Portafolio Web v1</h2>
+            <div class="text-container">
+              <p>Página web personal para compartir mi perfil y proyectos. El fondo estrellado se creó con Three.js
+                siguiendo un tutorial, aunque en una versión anterior. Estoy trabajando en una actualización a React y
+                la última versión de Three.js</p>
+            </div>
+            <div class="buttons">
+              <div class="text-container">
+                <h3>Proyecto realizado con</h3>
+                <p>HTML, CSS, JavaScript y Three.JS</p>
+              </div>
+              <a class="content-button" target="_blank" href="https://localhost:5173/">Ir al sitio</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="contact">
+      <div class="modal">
+        <div class="title">
+          Contactarme
+          <button id="close-modal">X</button>
+        </div>
+        <div class="content">
+          <div class="form">
+            <h3>Rellene el formulario y me pondré en contacto</h3>
+            <form action="https://formsubmit.co/db471c14615df20e46802d15a9270bc6" method="POST">
+              <label for="name">Nombre</label>
+              <input type="text" name="name">
+
+              <label for="email">Correo</label>
+              <input type="email" name="email" id="email">
+
+              <label for="subject">Asunto</label>
+              <input type="text" name="subject">
+
+              <label for="comments" class="msg">Mensaje</label>
+              <textarea name="comments" cols="15" rows="5"></textarea>
+
+              <input class="content-button submit-button" type="submit" value="Enviar">
+
+              <input type="hidden" name="_next" value="https://localhost:5173/">
+              <input type="hidden" name="_captcha" value="false">
+            </form>
+          </div>
+          <div class="rrss">
+            <h3>Sígueme para saber acerca de mis trabajos o proyectos</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- The scene utils Geometry and it's deprecated, so we have to convert the function utilizing BufferGeometry or something similar. I took it from a tutorial in YouTube. -->
+  <script src="src/three.min.js"></script>
+  <!-- And then we will have to migrate it to react with react-three-fiber and react-three-drei -->
+  <script type="module" src="src/scene.js"></script>
+  <script type="module" src="src/main.js"></script>
 </body>
 
 </html>

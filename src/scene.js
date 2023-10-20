@@ -1,5 +1,5 @@
 // We set variables for a scene, a camera, a renderer, the object stars and the geometry starGeo
-let scene, camera, renderer, stars, starGeo;
+let scene, camera, renderer, star, stars, starGeo;
 // We set the variables for original velocity and acceleration
 let originalVelocity = 0; // Velocidad original
 let originalAcceleration = 0.00001;
@@ -11,7 +11,7 @@ function init() {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
     camera.position.z = 1;
-    camera.rotation.x = Math.PI / 1.75;
+    camera.rotation.x = Math.PI / 2;
 
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -95,28 +95,22 @@ init();
 let isAccelerated = false;
 
 // function to accelerate the stars
-function accelerate() {
+export function accelerate() {
     if (!isAccelerated) {
         starGeo.vertices.forEach(p => {
             p.acceleration = 0.1;
             // p.velocity += p.acceleration;
         }) 
-        console.log(starGeo.vertices[1].acceleration);
-        console.log(starGeo.vertices[1].velocity);
-        console.log(`Speed up`);
         isAccelerated = true;
     }
 
-
-}
-
-function decelerate() {
+    setTimeout(() => {
         if (isAccelerated) {
             starGeo.vertices.forEach(p => {
                 p.acceleration = -0.05;
             });
-            console.log(`Speed at ${starGeo.vertices[1].velocity}`);
         }
+    }, 1000);
 
     setTimeout(() => {
         if (isAccelerated) {
@@ -124,8 +118,8 @@ function decelerate() {
                 p.acceleration = originalAcceleration;
                 p.velocity = originalVelocity;
             });
-            console.log(`Speed at ${starGeo.vertices[1].velocity}`);
             isAccelerated = false;
         }
-    }, 1000);
+        console.log('You have reached your destination')
+    }, 1500);
 }
