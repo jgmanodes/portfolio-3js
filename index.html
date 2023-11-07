@@ -3,6 +3,7 @@
 
 <head>
   <meta charset=UTF-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +14,31 @@
 
 <body>
   <header>
-    <h1 id="name-title">Jorge González</h1>
+    <h1 id="name-title">Jorge Gonzalez</h1>
     <nav>
       <div class="button" id="about-button">Acerca de mi</div>
       <div class="button" id="projects-button">Proyectos</div>
       <div class="button" id="contact-button">Contacto</div>
+      <div class="dropdown">
+        <div class="menu-icon">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24"
+            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 6l16 0"></path>
+            <path d="M4 12l16 0"></path>
+            <path d="M4 18l16 0"></path>
+          </svg> -->
+          <span class="line" id="line1"></span>
+          <span class="line" id="line2"></span>
+          <span class="line" id="line3"></span>
+        </div>
+        <ul class="dropdown-menu">
+          <div class="dropdown-button" id="dropdown-about-button">Acerca</div>
+          <div class="dropdown-button" id="dropdown-projects-button">Proyectos</div>
+          <div class="dropdown-button" id="dropdown-contact-button">Contacto</div>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -29,7 +50,7 @@
 
       <div class="content">
         <div class="text-container">
-          <p class="black">¡Hola! Mi nombre es Jorge González, soy un Desarrollador Full Stack de 27 años y vivo en
+          <p class="black">¡Hola! Soy un Desarrollador Full Stack de 27 años y vivo en
             Chile
             🇨🇱 Soy padre con un alto sentido de responsabilidad y me considero una persona proactiva, autodidacta,
             creativa y altamente organizada.</p>
@@ -46,7 +67,7 @@
           </p>
           <p>
             Como autodidacta, me he adentrado en el mundo del Modelado e Impresión 3d, Programación Fullstack en
-            JavaScript y Diseño Web, actualmente me encuentro ¿puliendo? estas ¿habilidades? hasta dominarlos.
+            JavaScript y Diseño Web.
           </p>
           <p class="black">
             También domino el idioma inglés (C1) y me encuentro aprendiendo Francés, lo cual me permitirá ampliar mi
@@ -202,11 +223,26 @@
           </ul>
         </div>
         <div class="certificates">
-          <p>Para ver mis certificados y mi CV</p>
+          <p>Para ver mis certificados y CV</p>
           <a target="_blank" class="content-button"
             href="https://drive.google.com/drive/folders/1v3fssHd1xjRZhqbn_AQq9Z_aFNdUuvjP">Pulsa
             Aquí</a>
         </div>
+
+        <!-- Button to change between content -->
+        <button class="mobile-button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-switch-horizontal" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M8 8l-4 4l4 4"></path>
+            <path d="M4 12l15 0"></path>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-switch-horizontal" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M16 8l4 4l-4 4"></path>
+            <path d="M5 12l15 0"></path>
+         </svg>
+
+        </button>
       </div>
     </section>
 
@@ -259,38 +295,38 @@
     <section id="contact">
       <div class="modal">
         <div class="title">
-          Contactarme
+          Contacto
           <button id="close-modal">X</button>
         </div>
         <div class="content">
-          <div class="form">
-            <h3>Rellene el formulario y me pondré en contacto</h3>
-            <form action="https://formsubmit.co/db471c14615df20e46802d15a9270bc6" method="POST">
-              <label for="name">Nombre</label>
-              <input type="text" name="name">
+          <p class="contact-h3">Si tienes alguna oferta laboral o buscas colaboración en algún proyecto en donde encajen
+            mis habilidades, rellena el formulario y me pondré en contacto.</p>
+          <!-- <div class="form"> -->
+          <form action="https://formsubmit.co/db471c14615df20e46802d15a9270bc6" method="POST">
+            <label for="name">Nombre</label>
+            <input class="name-input" type="text" name="name">
 
-              <label for="email">Correo</label>
-              <input type="email" name="email" id="email">
+            <label for="email">Correo</label>
+            <input class="email-input" type="email" name="email">
 
-              <label for="subject">Asunto</label>
-              <input type="text" name="subject">
+            <label for="subject">Asunto</label>
+            <input class="subject-input" type="text" name="subject">
 
-              <label for="comments" class="msg">Mensaje</label>
-              <textarea name="comments" cols="15" rows="5"></textarea>
+            <label for="comments" class="msg">Mensaje</label>
+            <textarea class="comments-input" name="comments" cols="15" rows="5"></textarea>
 
-              <input class="content-button submit-button" type="submit" value="Enviar">
+            <input class="content-button submit-button" type="submit" value="Enviar">
 
-              <input type="hidden" name="_next" value="https://localhost:5173/">
-              <input type="hidden" name="_captcha" value="false">
-            </form>
-          </div>
-          <div class="rrss">
-            <h3>Sígueme para saber acerca de mis trabajos o proyectos</h3>
-          </div>
+            <input type="hidden" name="_next" value="http://localhost:5173/">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+          <!-- </div> -->
         </div>
       </div>
     </section>
   </main>
+
+
 
 
   <!-- The scene utils Geometry and it's deprecated, so we have to convert the function utilizing BufferGeometry or something similar. I took it from a tutorial in YouTube. -->

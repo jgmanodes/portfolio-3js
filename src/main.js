@@ -126,6 +126,10 @@ const closeModalButton = document.querySelector("#close-modal");
 
 // Contact open button
 contactButton.addEventListener('click', () => {
+    contactSectionOn();
+})
+
+function contactSectionOn() {
     contactSection.classList.add('section-on'); // #contact: display on
 
     // Full-div with opacity 75%;
@@ -136,7 +140,6 @@ contactButton.addEventListener('click', () => {
         contactSection.insertBefore(newDiv, contactSection.children[0]);
     }
 
-
     // Timeout for full-div animation (0.5s)
     setTimeout(() => {
         contactModal.classList.add("section-on-animation", "section-on"); // display on and animation of contactModal
@@ -146,15 +149,14 @@ contactButton.addEventListener('click', () => {
     }, 500);
 
     // Conditions
-    
+
     if (nameTitle.className === "") { // if we are in Home 
         setMainZIndex(1); // zIndex of Main set to 1, in front of header (full height) 
     } else { // if we are in a section (about, project)
         contactSection.style.zIndex = "1";  // so that contactSection is above another section
-        contactSection.style.top = "-80px"; // this will ignore the 100px header-top
+        contactSection.style.top = "-10vh"; // this will ignore the 100px header-top
     }
-})
-
+}
 
 // Contact closing button
 closeModalButton.addEventListener("click", () => {
@@ -168,6 +170,7 @@ closeModalButton.addEventListener("click", () => {
         if (firstChild.className === "full-div full-div-on") { // if its className is full-div
             firstChild.classList.add('full-div-off'); // closing animation for full-div
 
+            headerElement.classList.remove("opacity-toggle");
             // Timeout for closing animation from full-div
             setTimeout(() => {
                 contactSection.removeChild(firstChild); // delete full-div
@@ -178,6 +181,7 @@ closeModalButton.addEventListener("click", () => {
                 } else { // if we are in Home
                     setMainZIndex(-1); // reset zIndex of main to -1
                 }
+
             }, 700);
         }
     }, 300);
@@ -185,10 +189,107 @@ closeModalButton.addEventListener("click", () => {
 
 
 
-
-
 // ---------------------
 // CONTACT SUBMIT BUTTON 
 // ---------------------
 
+
 const submitButton = document.querySelector('.submit-button');
+const form = document.querySelector('form');
+
+submitButton.addEventListener('click', e => {
+    e.preventDefault();
+
+    let name = document.querySelector('.name-input');
+    let email = document.querySelector('.email-input');
+    let subject = document.querySelector('.subject-input');
+    let comments = document.querySelector('.comments-input');
+
+    if (name.value === "" || email.value === "" || subject.value === "" || comments.value === "") {
+        alert('Todos los campos son obligatorios');
+    } else {
+        alert('Formulario enviado correctamente');
+        form.submit();
+    }
+
+})
+
+
+
+
+// -------------
+// DROPDOWN MENU
+// -------------
+
+const menuIcon = document.querySelector(".menu-icon");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+let dropOff = true; // 0 = off, 1 = on
+
+menuIcon.addEventListener("click", function () {
+    nameTitle.classList.toggle('disabled');
+
+    menuIcon.classList.toggle('active');
+    dropdownMenu.classList.toggle("active");
+});
+
+
+const dropdownAboutButton = document.querySelector("#dropdown-about-button");
+const dropdownProjectsButton = document.querySelector("#dropdown-projects-button");
+const dropdownContactButton = document.querySelector("#dropdown-contact-button");
+
+// dropdownAboutButton.addEventListener('click', () => {
+//     navButtons(aboutSection, projectSection);
+// })
+dropdownAboutButton.addEventListener('click', () => {
+    navButtons(aboutSection, projectSection);
+    removeStyles(aboutSection, projectSection);
+});
+dropdownProjectsButton.addEventListener('click', () => {
+    navButtons(projectSection, aboutSection);
+    removeStyles(projectSection, aboutSection);
+});
+dropdownContactButton.addEventListener('click', () => {
+    contactSectionOn();
+    removeStyles(aboutSection, projectSection, contactSection);
+    // menuIcon.classList.toggle("opacity-toggle");
+    // nameTitle.classList.toggle("opacity-toggle");
+    headerElement.classList.add("opacity-toggle");
+});
+
+function removeStyles(sectionA, sectionB, sectionC) {
+    if (sectionB.className === "container" && sectionA.className === "container section-on animation-zumbido") {
+        dropdownMenu.classList.remove("active");
+        menuIcon.classList.remove("active");
+        nameTitle.classList.remove('disabled');
+    } else if (sectionB.className === "container section-on section-off-animation" && sectionA.className === "container") {
+        dropdownMenu.classList.remove("active");
+        menuIcon.classList.remove("active");
+        menuIcon.style.opacity = "0"
+        setTimeout(() => {
+            nameTitle.classList.remove('disabled');
+            menuIcon.style.opacity = "1"
+        }, 1200);
+    } else if (sectionC.className === "section-on") {
+        dropdownMenu.classList.remove("active");
+        menuIcon.classList.remove("active");
+        nameTitle.classList.remove('disabled');
+    }
+}
+
+
+const mobileButton = document.querySelector(".mobile-button");
+
+mobileButton.addEventListener('click', e => {
+    e.preventDefault();
+    let titleContainer = document.querySelector("div.title");
+    let textContainer = document.querySelector(".text-container");
+    let stackContainer = document.querySelector(".stack-container");
+    let certificatesContainer = document.querySelector(".certificates");
+
+    titleContainer.classList.toggle("moveX");
+    textContainer.classList.toggle("moveX");
+
+    stackContainer.classList.toggle("moveX");
+    certificatesContainer.classList.toggle("moveX");
+})
