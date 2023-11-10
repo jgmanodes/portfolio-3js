@@ -1,3 +1,6 @@
+import * as THREE from 'three';
+
+
 // We set variables for a scene, a camera, a renderer, the object stars and the geometry starGeo
 let scene, camera, renderer, star, stars, starGeo;
 // We set the variables for original velocity and acceleration

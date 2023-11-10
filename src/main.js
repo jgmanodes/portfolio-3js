@@ -1,4 +1,4 @@
-import { accelerate } from './scene.js';    // Function to move stars
+// import { accelerate } from './scene.js';    // Function to move stars
 
 // Function to set z-index on Main
 function setMainZIndex(index) {
@@ -69,7 +69,7 @@ function navButtons(nextSection, actualSection) {
 
     if (actualSection.className === 'container section-on' && nextSection.className === 'container') {   // If we are in a section
         // We accelerate and add closing animation to actual section
-        accelerate();
+        // accelerate();
         actualSection.classList.add('section-off-animation');
         setTimeout(() => {
             // Add class names to display next section and remove the actual section class names
@@ -82,7 +82,7 @@ function navButtons(nextSection, actualSection) {
         }, 1500);
     } else if (nextSection.className === "container" && actualSection.className === 'container') {     // If we are in Home
         // We accelerate and add closing and opening animation to title and navbar
-        accelerate();
+        // accelerate();
         nameTitle.className = 'header-animation';
         navElement.className = 'header-animation';
         setTimeout(() => {
